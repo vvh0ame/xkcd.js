@@ -1,10 +1,14 @@
-# xkcd.py
+# xkcd.js
 Web-API for [xkcd.com](https://xkcd.com) website to retrieve xkcd comics 
 
 ## Example
-```python
-import xkcd
-xkcd = xkcd.Xkcd()
-current_comics = xkcd.get_current_comics()
-print(current_comics)
+```JavaScript
+async function main() {
+	const { Xkcd } = require("./xkcd.js")
+	const xkcd = new Xkcd()
+	const currentComics = await xkcd.getCurrentComics()
+	console.log(currentComics)
+}
+
+main()
 ```
